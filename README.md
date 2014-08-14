@@ -16,6 +16,14 @@ Run the following command to start fluentd:
 
   # docker run -d -p 8888:8888 -p 24224:24224 openfirmware/fluentd
 
+## Running fluentd with custom plugins
+
+Using the `FLUENTD_PLUGINS` environment variable, plugins can be automatically installed:
+
+  # docker run -d -p 8888:8888 -p 24224:24224 -e FLUENTD_PLUGINS="fluent-plugin-riak fluent-plugin-kafka" openfirmware/fluentd 
+
+Separate each plugin with a space character. Each plugin will be installed before `fluentd` is run.
+
 ## Credits
 
 * [Original docker-fluentd repository](https://github.com/jplock/docker-fluentd) created by jplock
