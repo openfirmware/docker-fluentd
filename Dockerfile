@@ -12,11 +12,7 @@ RUN curl -L http://toolbelt.treasuredata.com/sh/install-ubuntu-precise.sh | sh
 ENV LD_PRELOAD /usr/lib/fluent/jemalloc/lib/libjemalloc.so
 RUN ulimit -n 65536
 
-# Add scripts.
-ADD run.sh /run.sh
-ADD install_plugins.sh /install_plugins.sh
-RUN chmod 755 /*.sh
-
 EXPOSE 24224 8888
 
-CMD ["./run.sh"]
+ENTRYPOINT ["/usr/sbin/td-agent"]
+CMD ["-v"]
