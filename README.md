@@ -18,7 +18,9 @@ Run the following command to start fluentd:
 
 ## Running fluentd with custom plugins
 
-(Section being rewritten)
+This image can be used as a base image to add plugins for fluentd. A fully documented [example using ElasticSearch](https://github.com/openfirmware/docker-fluentd-elasticsearch) is available.
+
+To support other plugin setups, fork the [docker-fluentd-elasticsearch](https://github.com/openfirmware/docker-fluentd-elasticsearch) repository and customize for your plugins.
 
 ## Credits
 
