@@ -2,9 +2,11 @@
 
 Base docker image to run fluentd.
 
+Currently locked to version 2.2.0. Runs on a base image of wheezy.
+
 ## Building a tagged release from Github
 
-As an alternative to the [Docker Index](https://index.docker.io/), an image can be created from my Github repository:
+As an alternative to the [Docker Registry](https://registry.hub.docker.com/), an image can be created from my Github repository:
 
     # docker build -t openfirmware/fluentd github.com/openfirmware/docker-fluentd.git
 
@@ -25,4 +27,3 @@ To support other plugin setups, fork the [docker-fluentd-elasticsearch](https://
 ## Credits
 
 * [Original docker-fluentd repository](https://github.com/jplock/docker-fluentd) created by jplock
-
